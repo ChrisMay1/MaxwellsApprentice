@@ -257,7 +257,6 @@ Sig is a sub dictionary key which determines which signal will go out
         sig 3 is time 18.5-26.0 seconds
         sig 4 is time 26.0-33.5 seconds
         sig 5 is time 33.5 to the end of the file
-
 The frequencies are
         3.55MHz
         7.1MHz
@@ -268,27 +267,25 @@ The frequencies are
         225MHz
         435MHz
         905MHz
-
 slptime is a sub dictionary key which determines the time to spend at that frequency.
         These can be adjusted to fit the needs during the demo.
         
 Currently the morse code sections are commented out to make it
 easier to time the FM signals.
-
 To uncomment, just delete the # ~ from the front of the line or highlight the
 block of code and press ctrol + e.
 '''
 
 fdict = {
-        # ~ 3.55e6:{'sig':0,'slptime':13},      # Morse Code Signal
-        # ~ 7.1e6:{'sig':0,'slptime':13},       # Morse Code Signal
-        # ~ 21.1e6:{'sig':0,'slptime':13},      # Morse Code Signal
-        # ~ 28.6e6:{'sig':0,'slptime':14},      # Morse Code Signal
-        52e6:{'sig':1,'slptime':11},
-        145e6:{'sig':2,'slptime':7.5},
-        225e6:{'sig':3,'slptime':7.5},
-        435e6:{'sig':4,'slptime':7.5},
-        905e6:{'sig':5,'slptime':7.5}
+        3.55e6:{'sig':0,'slptime':22/4},      # Morse Code Signal
+        7.1e6:{'sig':0,'slptime':22/4},       # Morse Code Signal
+        21.1e6:{'sig':0,'slptime':22/4},      # Morse Code Signal
+        28.6e6:{'sig':0,'slptime':22/4},      # Morse Code Signal
+        52e6:{'sig':1,'slptime':22},
+        145e6:{'sig':2,'slptime':15.0},
+        225e6:{'sig':3,'slptime':15.0},
+        435e6:{'sig':4,'slptime':15.0},
+        905e6:{'sig':5,'slptime':15.0}
         } 
         
         
@@ -303,4 +300,3 @@ while True:
         print('Frequency has been set to: ', tb.get_freq())
         print('Signal type has been set to: ', tb.get_signal_source())
         time.sleep(slptime)
-
